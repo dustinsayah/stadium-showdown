@@ -1,0 +1,110 @@
+/* General container styling */
+.game-setup-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .game-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+  
+  /* Section headers */
+  .section-label {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  /* Sports button group */
+  .sports-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Individual sport buttons */
+  .sport-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .sport-btn:hover {
+    background-color: #fb8c00;
+  }
+  
+  .sport-btn.selected {
+    background-color: #4caf50;
+    transform: scale(1.05);
+  }
+  
+  /* Difficulty dropdown */
+  .difficulty-select {
+    padding: 10px 16px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 2rem;
+    width: 200px;
+    text-align: center;
+  }
+  
+  /* Button container to center Create/Start Game buttons */
+  .center-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Primary action buttons */
+  .primary-btn {
+    background-color: #03a9f4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+  }
+  
+  .primary-btn:hover {
+    background-color: #0288d1;
+    transform: scale(1.05);
+  }
+  
+  /* Game code display area */
+  .game-code-display {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .code-text {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  

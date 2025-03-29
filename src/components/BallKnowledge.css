@@ -1,0 +1,148 @@
+.ball-knowledge-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .mode-selection,
+  .question-section,
+  .end-screen-wrapper {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mode-selection select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .question-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .options-grid button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    background-color: #f3f3f3;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .options-grid button:hover {
+    background-color: #ddd;
+  }
+  
+  .timer {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .score {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .end-screen-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .end-btn {
+    margin: 12px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .end-btn.home {
+    background-color: #2196f3;
+  }
+  
+  .knowledge-score span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4caf50;
+  }
+  
+  .highlight {
+    color: #f44336;
+    font-weight: bold;
+  }
+  .bk-container {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    background: #0a2b4c;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: "Orbitron", sans-serif;
+    box-shadow: 0 0 20px #0ef;
+  }
+  
+  .bk-question-count {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .bk-question {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .bk-timer {
+    font-size: 18px;
+    color: #00f0ff;
+    margin-bottom: 15px;
+  }
+  
+  .bk-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .bk-option {
+    padding: 12px 18px;
+    background-color: #1e90ff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  .bk-option:hover {
+    background-color: #0ef;
+  }
+  
+  .bk-loading {
+    color: #ccc;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 100px;
+  }
+  

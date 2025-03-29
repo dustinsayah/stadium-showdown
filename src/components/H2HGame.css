@@ -1,0 +1,79 @@
+.h2h-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    padding: 20px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Titles and Score */
+  .game-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .game-code,
+  .score {
+    font-size: 1.4rem;
+    margin: 5px 0;
+  }
+  
+  .waiting-text,
+  .no-questions {
+    font-size: 1.3rem;
+    margin-top: 20px;
+  }
+  
+  /* Question Box */
+  .question-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Center question */
+  .question-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Centered Answer Buttons */
+  .answer-button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 12px 20px;
+    background-color: #ff9800;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s ease;
+  }
+  
+  .answer-button:hover {
+    background-color: #f57c00;
+  }
+  
+  .loading-text {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 100px;
+  }
+  .start-button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }

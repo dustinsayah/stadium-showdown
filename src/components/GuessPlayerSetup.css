@@ -1,0 +1,73 @@
+.setup-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.setup-container h1 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+}
+
+/* Layout for Sport and Difficulty side-by-side */
+.selection-sections {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.setup-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.setup-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.setup-button {
+  background-color: #29b6f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin: 8px 0;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 160px;
+}
+
+.setup-button:hover {
+  background-color: #0288d1;
+}
+
+.setup-button.selected {
+  background-color: #4caf50;
+}
+
+.start-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 50px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #388e3c;
+}

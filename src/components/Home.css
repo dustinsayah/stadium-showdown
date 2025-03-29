@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 🌟 Container */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* 🏆 Title */
+.home-title {
+  font-size: 5rem;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff7300, #fca311);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: titlePop 2s ease-in-out infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+@keyframes titlePop {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+/* 📣 Subtitle */
+.home-subtitle {
+  font-size: 1.4rem;
+  font-family: 'Orbitron', sans-serif;
+  opacity: 0.9;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+
+/* 🎮 Game Mode Grid */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+  max-width: 1200px;
+  width: 100%;
+  justify-items: center;
+}
+
+/* Center the second row (2 buttons) */
+.button-grid .row-2 {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
+/* 🕹️ Game Buttons */
+.home-button {
+  padding: 25px 40px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  min-width: 290px;
+  max-width: 340px;
+  width: 100%;
+}
+
+.home-button:hover {
+  transform: scale(1.08);
+  filter: brightness(1.15);
+}
+
+.home-button:active {
+  transform: scale(0.95);
+}
+
+/* 🎨 Button Colors */
+.classic { background: linear-gradient(135deg, #ff5733, #fca311); }
+.rapid { background: linear-gradient(135deg, #00c9ff, #92fe9d); }
+.h2h { background: linear-gradient(135deg, #8e2de2, #4a00e0); }
+.join-h2h { background: linear-gradient(135deg, #ff512f, #dd2476); }
+.guess-player { background: linear-gradient(135deg, #00d2ff, #3a7bd5); }
+.weekly { background: linear-gradient(135deg, #38ef7d, #11998e); }
+
+/* 🥇 Leaderboard & Avatar Buttons */
+.leaderboard-btn,
+.avatar-btn {
+  margin-top: 30px;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.avatar-btn {
+  background-color: #3a7bd5;
+  margin-top: 15px;
+}
+
+.leaderboard-btn:hover,
+.avatar-btn:hover {
+  transform: scale(1.05);
+}
+
+/* ❓ How To Play Button */
+.how-to-top-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  z-index: 100;
+}
+
+.how-to-top-button:hover {
+  transform: scale(1.05);
+}
+
+/* 🔄 Responsive */
+@media (max-width: 1200px) {
+  .button-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .button-grid .row-2 {
+    grid-column: span 2;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-button {
+    max-width: 100%;
+    font-size: 1.3rem;
+    padding: 20px;
+  }
+
+  .home-title {
+    font-size: 3rem;
+  }
+}

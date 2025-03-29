@@ -1,0 +1,36 @@
+.weekly-container {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+  }
+  
+  .answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1rem auto;
+    max-width: 400px;
+  }
+  
+  .answer-options button {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    background: #0077ff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .answer-options .correct {
+    background: #28a745;
+  }
+  
+  .answer-options .wrong {
+    background: #d32f2f;
+  }
+  
+  .end-screen {
+    margin-top: 2rem;
+  }
+  

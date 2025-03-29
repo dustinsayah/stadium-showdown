@@ -1,0 +1,238 @@
+/* General Container Styling */
+.classic-trivia-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Setup Screen */
+.setup-screen h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: popIn 0.5s ease-in-out;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 15px 0;
+}
+
+/* Sports Selection */
+.sports-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sports-options button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin: 5px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sports-options button:hover {
+  background: #ff5722;
+}
+
+.sports-options .selected {
+  background: #4caf50;
+  transform: scale(1.1);
+}
+
+/* Difficulty Selection */
+select {
+  width: 200px;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  background: white;
+  border: none;
+  margin: 10px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background: #218838;
+  transform: scale(1.1);
+}
+
+/* Game Screen */
+.game-screen {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: popIn 0.5s ease-in-out;
+}
+
+.question-count {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.answer-options button {
+  background: #007bff;
+  font-size: 1.3rem;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.answer-options button:hover {
+  background: #0056b3;
+}
+
+.answer-options .correct {
+  background: #4caf50 !important;
+  animation: correctGlow 0.5s ease-in-out;
+}
+
+.answer-options .wrong {
+  background: #d32f2f !important;
+  animation: shake 0.5s ease-in-out;
+}
+
+.score {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* End Screen */
+.end-screen {
+  text-align: center;
+  animation: popIn 0.5s ease-in-out;
+}
+
+.end-screen h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffeb3b;
+}
+
+.end-screen h2 {
+  font-size: 2rem;
+}
+
+.end-screen button {
+  background: #ff5722;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.end-screen button:hover {
+  background: #e64a19;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes correctGlow {
+  0% { box-shadow: 0 0 10px rgba(76, 175, 80, 0.8); }
+  50% { box-shadow: 0 0 20px rgba(76, 175, 80, 1); }
+  100% { box-shadow: 0 0 10px rgba(76, 175, 80, 0.8); }
+}
+.start-button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+/* 👤 Username Setup Styling */
+.username-setup {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.username-setup input {
+  padding: 12px;
+  font-size: 1.1rem;
+  width: 260px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.username-setup button {
+  padding: 10px 25px;
+  background-color: #00c9ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+

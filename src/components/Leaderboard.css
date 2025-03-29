@@ -1,0 +1,116 @@
+.leaderboard-container {
+  text-align: center;
+  padding: 40px;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.leaderboard-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.leaderboard-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.leaderboard-controls select {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #ffffff;
+  color: #222;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.leaderboard-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  border-radius: 12px;
+}
+
+.rank {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.avatar-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.username {
+  flex: 1;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.score {
+  font-size: 1.2rem;
+  color: #00ffcc;
+  font-weight: bold;
+}
+.avatar-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  vertical-align: middle;
+}
+
+.leaderboard-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  background-color: #222;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.leaderboard-entry .rank {
+  font-weight: bold;
+  margin-right: 10px;
+  color: gold;
+}
+
+.leaderboard-entry .username {
+  flex: 1;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.leaderboard-entry .score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4caf50;
+}

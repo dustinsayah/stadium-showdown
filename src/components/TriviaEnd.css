@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@500&display=swap');
+
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+}
+
+.trivia-end-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.end-title {
+  font-size: 3.5rem;
+  font-family: "Orbitron", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, #fca311, #ff5733);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.victory-message {
+  font-size: 2rem;
+  color: #00ffcc;
+  animation: pop 1s infinite alternate;
+}
+
+.defeat-message {
+  font-size: 2rem;
+  color: #ff6363;
+  animation: shake 1s infinite alternate;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shake {
+  from {
+    transform: translateX(-5px);
+  }
+  to {
+    transform: translateX(5px);
+  }
+}
+
+.score-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  width: 250px;
+  font-size: 1.5rem;
+  border: 2px solid white;
+}
+
+.score-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+}
+
+.home-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: "Bebas Neue", sans-serif;
+  background: linear-gradient(135deg, #00c9ff, #92fe9d);
+  color: white;
+  margin-top: 20px;
+}
+
+.home-button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.home-button:active {
+  transform: scale(0.95);
+}
