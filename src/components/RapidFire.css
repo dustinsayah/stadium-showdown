@@ -79,21 +79,53 @@
   transform: scale(1.05);
 }
 
-/* Sport Selection (before game starts) */
+/* ⚡️ Sport Selection UI (Enhanced) */
 .sport-selection {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .sport-checkbox {
-  margin: 6px;
-  font-size: 1rem;
+  margin: 8px;
+  font-size: 1.05rem;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 220px;
+  justify-content: center;
+  border: 1px solid transparent;
 }
 
+.sport-checkbox:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #00c9ff;
+  transform: scale(1.03);
+}
+
+.sport-checkbox input {
+  transform: scale(1.2);
+}
+
+/* Start Button */
 .start-game-button {
   margin-top: 20px;
   padding: 12px 24px;
@@ -170,60 +202,8 @@
     padding: 10px;
     width: 90%;
   }
-}
-/* 🎨 Enhanced Sports Selection UI */
-.sport-selection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  gap: 10px;
-}
 
-.sport-selection-columns {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px 40px;
-  margin-top: 10px;
-  width: 100%;
-  max-width: 600px;
-}
-
-.sport-checkbox {
-  background: rgba(255, 255, 255, 0.08);
-  padding: 10px 20px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.1rem;
-  transition: background 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-  width: 100%;
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
-}
-
-.sport-checkbox:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.03);
-}
-
-.sport-checkbox input[type="checkbox"] {
-  transform: scale(1.5);
-  accent-color: #00c9ff;
-  cursor: pointer;
-}
-
-/* Make the checkbox look centered and clean */
-.sport-checkbox label {
-  cursor: pointer;
-  flex: 1;
-}
-
-/* ✅ Responsive Fix for Checkbox Layout */
-@media screen and (max-width: 500px) {
-  .sport-selection-columns {
-    grid-template-columns: 1fr;
-    gap: 10px;
+  .sport-checkbox {
+    width: 90%;
   }
 }
