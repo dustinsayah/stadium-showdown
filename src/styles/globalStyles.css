@@ -1,0 +1,101 @@
+/* ================================
+   🌐 Global Styles for Stadium Showdown
+   ================================ */
+
+/* Import custom Google font (Orbitron - sporty vibe) */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Root Resets & Base Setup */
+:root {
+  --primary-color: #1da7f0;
+  --secondary-color: #00c9ff;
+  --accent-color: #fca311;
+  --bg-gradient: linear-gradient(135deg, #1e3c72, #2a5298);
+  --font-family: 'Orbitron', sans-serif;
+  --max-width: 1200px;
+  --transition: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family);
+  background: var(--bg-gradient);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow-box {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.glow-text {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 6px var(--accent-color), 0 0 12px var(--secondary-color);
+  }
+  to {
+    text-shadow: 0 0 14px var(--accent-color), 0 0 28px var(--primary-color);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 85%;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
