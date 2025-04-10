@@ -77,7 +77,7 @@ button:hover {
 
 /* ✅ Team Logos: Make them smaller */
 .team-logo {
-  height: 30px;
+  height: 110px;
   width: auto;
   margin: 0 4px;
   vertical-align: middle;
