@@ -12,9 +12,7 @@ const CareerPathSetup = () => {
 
   const toggleSport = (sport) => {
     setSelectedSports((prev) =>
-      prev.includes(sport)
-        ? prev.filter((s) => s !== sport)
-        : [...prev, sport]
+      prev.includes(sport) ? prev.filter((s) => s !== sport) : [...prev, sport]
     );
   };
 
@@ -44,9 +42,7 @@ const CareerPathSetup = () => {
           {sportsOptions.map((sport) => (
             <button
               key={sport}
-              className={`sport-button ${
-                selectedSports.includes(sport) ? "selected" : ""
-              }`}
+              className={`sport-button ${selectedSports.includes(sport) ? "selected" : ""}`}
               onClick={() => toggleSport(sport)}
             >
               {sport}
