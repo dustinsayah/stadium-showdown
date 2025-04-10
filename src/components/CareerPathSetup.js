@@ -39,18 +39,25 @@ const CareerPathSetup = () => {
       <h1 className="setup-title">🛣️ Career Path</h1>
 
       <div className="setup-section">
-        <h2>Select a Sport:</h2>
+        <h2>Select Sport(s):</h2>
         <div className="sport-buttons">
           {sportsOptions.map((sport) => (
             <button
               key={sport}
-              className={selectedSports.includes(sport) ? "selected" : ""}
+              className={`sport-button ${
+                selectedSports.includes(sport) ? "selected" : ""
+              }`}
               onClick={() => toggleSport(sport)}
             >
-              {sport}
+              {selectedSports.includes(sport) ? `✅ ${sport}` : sport}
             </button>
           ))}
         </div>
+        {selectedSports.length > 0 && (
+          <p className="selected-preview">
+            You selected: {selectedSports.join(", ")}
+          </p>
+        )}
       </div>
 
       <div className="setup-section">

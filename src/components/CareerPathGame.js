@@ -24,8 +24,6 @@ const CareerPathGame = () => {
   const [gameOver, setGameOver] = useState(false);
   const [scoreSubmitted, setScoreSubmitted] = useState(false);
 
-  const current = players[index];
-
   useEffect(() => {
     const fetchPlayers = async () => {
       const q = query(
@@ -65,7 +63,7 @@ const CareerPathGame = () => {
   };
 
   const goToNext = () => {
-    if (index + 1 >= 10) {
+    if (index + 1 >= players.length) {
       setGameOver(true);
     } else {
       setIndex((i) => i + 1);
@@ -129,11 +127,14 @@ const CareerPathGame = () => {
       </React.Fragment>
     ));
 
+  // ✅ Moved inside component render
+  const current = players[index];
+
   if (!current) return <h2 className="loading">Loading player...</h2>;
 
   return (
     <div className="career-container">
-      <h2>Career Path: Round {index + 1} / 10</h2>
+      <h2>Career Path: Round {index + 1} / {players.length}</h2>
       <h3 className="score-display">Score: {score}</h3>
 
       <div className="career-card">
