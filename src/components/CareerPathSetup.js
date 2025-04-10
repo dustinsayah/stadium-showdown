@@ -49,15 +49,10 @@ const CareerPathSetup = () => {
               }`}
               onClick={() => toggleSport(sport)}
             >
-              {selectedSports.includes(sport) ? `✅ ${sport}` : sport}
+              {sport}
             </button>
           ))}
         </div>
-        {selectedSports.length > 0 && (
-          <p className="selected-preview">
-            You selected: {selectedSports.join(", ")}
-          </p>
-        )}
       </div>
 
       <div className="setup-section">

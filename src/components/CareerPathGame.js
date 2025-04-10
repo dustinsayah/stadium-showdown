@@ -43,8 +43,11 @@ const CareerPathGame = () => {
 
   const normalize = (str) => str?.toLowerCase().replace(/[^a-z]/g, "");
 
+  const current = players[index];
+
   const handleGuess = () => {
-    const current = players[index];
+    if (!current) return;
+
     const input = normalize(guess);
     const name = normalize(current.name);
     const [first, last] = current.name.split(" ");
@@ -64,10 +67,10 @@ const CareerPathGame = () => {
   };
 
   const goToNext = () => {
-    if (index + 1 >= 10) {
+    if (index + 1 >= players.length) {
       setGameOver(true);
     } else {
-      setIndex((i) => i + 1);
+      setIndex((prev) => prev + 1);
       setGuess("");
       setShowOptions(false);
       setStatusMsg("");
@@ -75,7 +78,8 @@ const CareerPathGame = () => {
   };
 
   const handleOptionClick = (name) => {
-    const current = players[index];
+    if (!current) return;
+
     if (name === current.name) {
       setScore((prev) => prev + 1);
       setStatusMsg("✅ Correct (Multiple Choice)! +1");
@@ -110,7 +114,8 @@ const CareerPathGame = () => {
   }, [gameOver, scoreSubmitted]);
 
   const getOptions = () => {
-    const current = players[index];
+    if (!current) return [];
+
     const incorrect = players
       .filter((p) => p.name !== current.name)
       .map((p) => p.name);
@@ -130,16 +135,14 @@ const CareerPathGame = () => {
       </React.Fragment>
     ));
 
-  if (!players[index]) return <h2 className="loading">Loading player...</h2>;
-
-  const current = players[index];
+  if (!current) return <h2 className="loading">Loading player...</h2>;
 
   return (
     <div className="career-container">
       <h2>Career Path: Round {index + 1} / 10</h2>
       <h3 className="score-display">Score: {score}</h3>
 
-      <div key={current.name} className="career-card">
+      <div key={current.name + index} className="career-card">
         <p><strong>College:</strong> {current.college}</p>
         <p><strong>Career:</strong> {renderTeamLogos(current.teams)}</p>
         <p><strong>Draft Position:</strong> {current.draftPosition}</p>
