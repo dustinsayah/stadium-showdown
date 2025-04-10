@@ -1,123 +1,96 @@
-.career-container {
-    padding: 30px;
-    text-align: center;
-    font-family: "Segoe UI", sans-serif;
-    color: #fff;
-    background: linear-gradient(135deg, #1e1e1e, #2c3e50);
-    min-height: 100vh;
+.career-setup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  padding: 2rem;
+  text-align: center;
+}
+
+.setup-title {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px #fca311, 0 0 12px #ffb347;
   }
-  
-  .career-card {
-    background: #2e2e2e;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    box-shadow: 0 0 10px #000;
+  to {
+    text-shadow: 0 0 14px #fca311, 0 0 24px #ff5733;
   }
-  
-  .team-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    vertical-align: middle;
-    margin: 0 8px;
-    transition: transform 0.2s ease;
-  }
-  
-  .team-logo:hover {
-    transform: scale(1.1);
-  }
-  
-  .team-text {
-    display: inline-block;
-    background: #444;
-    padding: 6px 10px;
-    border-radius: 6px;
-    color: #fff;
-    margin: 0 5px;
-    font-weight: 500;
-  }
-  
-  .arrow {
-    margin: 0 5px;
-    font-size: 22px;
-    color: #ffcc00;
-  }
-  
-  input {
-    padding: 10px;
-    font-size: 16px;
-    width: 300px;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background: #00c851;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
-    margin: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  button:hover {
-    background: #007e33;
-  }
-  
-  .options-container button {
-    background: #4285f4;
-  }
-  
-  .options-container button:hover {
-    background: #2a6bd6;
-  }
-  
-  .status-msg {
-    font-size: 18px;
-    margin-top: 15px;
-    color: #ffeb3b;
-  }
-  
-  .score-display {
-    font-size: 20px;
-    font-weight: bold;
-    color: #00e676;
-  }
+}
+
+.setup-section {
+  margin: 20px 0;
+}
+
+.sport-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.sport-button {
+  background-color: #ffffff;
+  color: #1e1e2f;
+  border: 2px solid #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  min-width: 120px;
+  font-size: 1rem;
+}
+
+.sport-button:hover {
+  background-color: #f0f0f0;
+}
+
+.sport-button.selected {
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  color: #000;
+  border: 2px solid #00c9ff;
+  transform: scale(1.05);
+}
+
+.start-game-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #00c9ff, #92fe9d);
+  color: #1e1e2f;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.start-game-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+select {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Orbitron", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
   .sport-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .sport-button {
-    padding: 10px 16px;
-    font-size: 1rem;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    background-color: white;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  
-  .sport-button.selected {
-    background-color: #00c9ff;
-    color: white;
-    font-weight: bold;
-    border-color: #00c9ff;
-    box-shadow: 0 0 6px rgba(0, 201, 255, 0.6);
-  }
-  
-  .selected-preview {
-    margin-top: 10px;
-    font-style: italic;
-    color: #eee;
-    font-weight: 500;
-  }
-  
+}

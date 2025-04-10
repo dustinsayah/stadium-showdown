@@ -62,7 +62,7 @@ const teamLogos = {
     "Saints": "https://a.espncdn.com/i/teamlogos/nfl/500/no.png",
     "Panthers": "https://a.espncdn.com/i/teamlogos/nfl/500/car.png",
     "Commanders": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png",
-    "Cardinals": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
+    " F Cardinals": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
     "Falcons": "https://a.espncdn.com/i/teamlogos/nfl/500/atl.png",
     "Rams": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
     "Browns": "https://a.espncdn.com/i/teamlogos/nfl/500/cle.png",
