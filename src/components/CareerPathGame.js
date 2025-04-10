@@ -86,7 +86,7 @@ const CareerPathGame = () => {
     } else {
       setStatusMsg(`❌ Wrong. It was ${current.name}`);
     }
-    setTimeout(goToNext, 2000);
+    setTimeout(goToNext, 1000);
   };
 
   const submitScore = async () => {
