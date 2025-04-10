@@ -75,11 +75,15 @@ button:hover {
   padding-top: 100px;
 }
 
-/* ✅ Team Logos: Make them smaller */
 .team-logo {
-  height: 110px;
+  height: 50px;
   width: auto;
-  margin: 0 4px;
+  margin: 0 6px;
   vertical-align: middle;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-in-out;
 }
+
+.team-logo:hover {
+  transform: scale(1.1);
+}
+
