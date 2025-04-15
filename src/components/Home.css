@@ -181,20 +181,67 @@ body {
 
   .home-title {
     font-size: 3rem;
-  }
-  .top-left-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 10;
-  }
-  
-  .top-right-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
-  }
+  }/* 🔐 Top Buttons */
+.top-left-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  z-index: 100;
+}
+
+.top-left-button:hover {
+  transform: scale(1.05);
+}
+
+.top-right-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease;
+  z-index: 100;
+}
+
+.top-right-button:hover {
+  transform: scale(1.05);
+}
+
+/* 🔙 Back to Home Button (Privacy Page) */
+.back-home-button {
+  margin-top: 20px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.back-home
+
+
   
 
 
