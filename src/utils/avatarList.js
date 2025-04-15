@@ -1,5 +1,5 @@
 const avatarList = [
-  "https://api.dicebear.com/5.x/fun-emoji/svg?seed=Smiley",             // 😄
+  "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Smiley",             // 😄
   "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Zombie",             // 🧟
   "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Alien",              // 👽
   "https://api.dicebear.com/7.x/fun-emoji/svg?seed=Robot",              // 🤖

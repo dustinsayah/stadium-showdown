@@ -72,7 +72,7 @@ const HowToPlay = () => {
       <section>
         <h2>📅 Weekly Challenge</h2>
         <ul>
-          <li>Each week features a new hand-picked challenge with a leaderboard.</li>
+          <li>Each week features a new hand-picked challenge questions.</li>
           <li>Only one chance per week to post your best score!</li>
         </ul>
       </section>

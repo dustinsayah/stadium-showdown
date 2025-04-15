@@ -235,36 +235,4 @@ button:hover {
   font-size: 1.1rem;
   cursor: pointer;
 }
-.sport-buttons {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.sport-button {
-  padding: 10px 16px;
-  font-size: 1rem;
-  border-radius: 10px;
-  border: 2px solid #ccc;
-  background-color: white;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.sport-button.selected {
-  background-color: #00c9ff;
-  color: white;
-  font-weight: bold;
-  border-color: #00c9ff;
-  box-shadow: 0 0 6px rgba(0, 201, 255, 0.6);
-}
-
-.selected-preview {
-  margin-top: 10px;
-  font-style: italic;
-  color: #eee;
-  font-weight: 500;
-}
 

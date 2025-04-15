@@ -49,7 +49,7 @@ const questions = [
     { category: "classic_h2h", sport: "tennis", difficulty: "easy", question: "How many sets are in a Grand Slam mens match?", options: ["3", "4", "5", "6"], correctAnswer: "5" },
     { category: "classic_h2h", sport: "tennis", difficulty: "medium", question: "Who won the US Open in 2021 (Men)?", options: ["Medvedev", "Djokovic", "Thiem", "Alcaraz"], correctAnswer: "Medvedev" },
     { category: "classic_h2h", sport: "tennis", difficulty: "medium", question: "Who is the youngest male Grand Slam winner?", options: ["Nadal", "Becker", "Borg", "Wilander"], correctAnswer: "Becker" },
-    { category: "classic_h2h", sport: "tennis", difficulty: "hard", question: "Who won Wimbledon Women’s Singles in 2023?", options: ["Swiatek", "Rybakina", "Sabalenka", "Vondrousova"], correctAnswer: "Vondrousova" },
+    { category: "classic_h2h", sport: "tennis", difficulty: "hard", question: "Who won Wimbledon Womens Singles in 2023?", options: ["Swiatek", "Rybakina", "Sabalenka", "Vondrousova"], correctAnswer: "Vondrousova" },
     { category: "classic_h2h", sport: "tennis", difficulty: "hard", question: "Which male player won a Career Golden Slam?", options: ["Nadal", "Federer", "Djokovic", "Agassi"], correctAnswer: "Agassi" },
   ];
   

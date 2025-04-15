@@ -1,0 +1,63 @@
+[
+    {
+      "name": "LeBron James",
+      "image": "https://example.com/lebron.jpg",
+      "team": "Los Angeles Lakers",
+      "ppg": 27.1,
+      "apg": 7.4,
+      "rpg": 7.5,
+      "sport": "Basketball",
+      "difficulty": "Easy"
+    },
+    {
+      "name": "Michael Jordan",
+      "image": "https://example.com/jordan.jpg",
+      "team": "Chicago Bulls",
+      "ppg": 30.1,
+      "apg": 5.3,
+      "rpg": 6.2,
+      "sport": "Basketball",
+      "difficulty": "Easy"
+    },
+    {
+      "name": "Tom Brady",
+      "image": "https://example.com/brady.jpg",
+      "team": "New England Patriots",
+      "position": "Quarterback",
+      "yards": 84725,
+      "touchdowns": 624,
+      "sport": "Football",
+      "difficulty": "Easy"
+    },
+    {
+      "name": "Jerry Rice",
+      "image": "https://example.com/rice.jpg",
+      "team": "San Francisco 49ers",
+      "position": "Wide Receiver",
+      "yards": 22895,
+      "touchdowns": 197,
+      "sport": "Football",
+      "difficulty": "Easy"
+    },
+    {
+      "name": "Mike Trout",
+      "image": "https://example.com/trout.jpg",
+      "team": "Los Angeles Angels",
+      "position": "Outfielder",
+      "avg": 0.301,
+      "hr": 350,
+      "sport": "Baseball",
+      "difficulty": "Easy"
+    },
+    {
+      "name": "Babe Ruth",
+      "image": "https://example.com/ruth.jpg",
+      "team": "New York Yankees",
+      "position": "Outfielder",
+      "avg": 0.342,
+      "hr": 714,
+      "sport": "Baseball",
+      "difficulty": "Easy"
+    }
+  ]
+  
