@@ -13,18 +13,18 @@ const Home = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      {/* 📘 How to Play Button */}
+      {/* 📘 How to Play - Top Left */}
       <motion.button
-        className="how-to-top-button"
+        className="top-left-button"
         onClick={() => navigate("/how-to-play")}
         whileHover={{ scale: 1.05 }}
       >
         📘 How to Play
       </motion.button>
 
-      {/* 🔐 Privacy Policy Button */}
+      {/* 🔐 Privacy Policy - Top Right */}
       <motion.button
-        className="how-to-top-button"
+        className="top-right-button"
         onClick={() => navigate("/privacy-policy")}
         whileHover={{ scale: 1.05 }}
       >
