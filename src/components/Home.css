@@ -182,33 +182,19 @@ body {
   .home-title {
     font-size: 3rem;
   }
-}
-.top-left-button,
-.top-right-button {
-  position: absolute;
-  top: 15px;
-  padding: 10px 15px;
-  background-color: #f5f5f5;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
+  .top-left-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+  
+  .top-right-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+  }
+  
 
-.top-left-button {
-  left: 20px;
-}
-
-.top-right-button {
-  right: 20px;
-}
-
-.back-home-button {
-  margin-top: 15px;
-  padding: 10px 16px;
-  background-color: #eee;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-}
 
