@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
 
       <h3>What We Collect</h3>
       <ul>
-        <li>Gameplay statistics (scores, modes played)</li>
+        <li>Gameplay statistics (score, modes played)</li>
         <li>Optional profile information (username, avatar)</li>
         <li>Basic browser/device data for performance and analytics</li>
       </ul>
