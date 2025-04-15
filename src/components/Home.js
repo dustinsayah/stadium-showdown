@@ -22,6 +22,15 @@ const Home = () => {
         📘 How to Play
       </motion.button>
 
+      {/* 🔐 Privacy Policy Button */}
+      <motion.button
+        className="how-to-top-button"
+        onClick={() => navigate("/privacy-policy")}
+        whileHover={{ scale: 1.05 }}
+      >
+        🔐 Privacy Policy
+      </motion.button>
+
       {/* 🏆 Title */}
       <h1 className="home-title">🏆 Stadium Showdown 🏆</h1>
       <p className="home-subtitle">

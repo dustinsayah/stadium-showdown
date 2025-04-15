@@ -28,6 +28,8 @@ import HowToPlay from "./components/HowToPlay";
 import AdminFixTools from "./components/AdminFixTools";
 import AvatarSetup from "./components/AvatarSetup";
 import Leaderboard from "./components/Leaderboard";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+
 
 // 🎖️ Profile
 import Profile from "./components/Profile";
@@ -73,6 +75,8 @@ function App() {
       <Route path="/how-to-play" element={<HowToPlay />} />
       <Route path="/admin-fix" element={<AdminFixTools />} />
       <Route path="/avatar-setup" element={<AvatarSetup />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
 
       {/* 🏆 Leaderboards & Profile */}
       <Route path="/leaderboard" element={<Leaderboard />} />
