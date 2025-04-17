@@ -15,7 +15,7 @@ import GuessPlayerSetup from "./components/GuessPlayerSetup";
 import GuessThePlayer from "./components/GuessThePlayer";
 import WeeklyChallenge from "./components/WeeklyChallenge";
 
-// 🎮 New Game Modes
+// 🧠 New Game Modes
 import BallKnowledgeSetup from "./components/BallKnowledgeSetup";
 import BallKnowledgeGame from "./components/BallKnowledgeGame";
 import BallKnowledgeEnd from "./components/BallKnowledgeEnd";
@@ -23,15 +23,14 @@ import CareerPathSetup from "./components/CareerPathSetup";
 import CareerPathGame from "./components/CareerPathGame";
 import CareerPathEnd from "./components/CareerPathEnd";
 
-// ⚙️ Utility & Info Pages
+// ⚙️ Utility Pages
 import HowToPlay from "./components/HowToPlay";
 import AdminFixTools from "./components/AdminFixTools";
 import AvatarSetup from "./components/AvatarSetup";
 import Leaderboard from "./components/Leaderboard";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 
-
-// 🎖️ Profile
+// 👤 Profile
 import Profile from "./components/Profile";
 
 function App() {
@@ -66,19 +65,18 @@ function App() {
       <Route path="/ball-knowledge/game" element={<BallKnowledgeGame />} />
       <Route path="/ball-knowledge/end" element={<BallKnowledgeEnd />} />
 
-      {/* 🛣️ Career Path Game Mode */}
+      {/* 🛣️ Career Path Mode */}
       <Route path="/career-path/setup" element={<CareerPathSetup />} />
       <Route path="/career-path/game" element={<CareerPathGame />} />
       <Route path="/career-path/end" element={<CareerPathEnd />} />
 
-      {/* 📘 Utility Pages */}
+      {/* ⚙️ Info Pages */}
       <Route path="/how-to-play" element={<HowToPlay />} />
       <Route path="/admin-fix" element={<AdminFixTools />} />
       <Route path="/avatar-setup" element={<AvatarSetup />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
-
-      {/* 🏆 Leaderboards & Profile */}
+      {/* 🏆 Extras */}
       <Route path="/leaderboard" element={<Leaderboard />} />
       <Route path="/profile" element={<Profile />} />
     </Routes>
