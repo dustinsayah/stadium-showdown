@@ -1,16 +1,30 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./PrivacyPolicy.css";
-
-
 
 const PrivacyPolicy = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="privacy-policy-container">
+    <div style={{
+      padding: "30px",
+      maxWidth: "800px",
+      margin: "auto",
+      color: "white",
+      fontFamily: "Arial, sans-serif"
+    }}>
       {/* 🔙 Back Button */}
-      <button className="back-home-button" onClick={() => navigate("/")}>
+      <button
+        onClick={() => navigate("/")}
+        style={{
+          marginBottom: "20px",
+          padding: "10px 20px",
+          backgroundColor: "#ffcc00",
+          color: "#000",
+          border: "none",
+          borderRadius: "6px",
+          cursor: "pointer"
+        }}
+      >
         ← Back to Home
       </button>
 
