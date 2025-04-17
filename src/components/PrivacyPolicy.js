@@ -5,13 +5,15 @@ const PrivacyPolicy = () => {
   const navigate = useNavigate();
 
   return (
-    <div style={{
-      padding: "30px",
-      maxWidth: "800px",
-      margin: "auto",
-      color: "white",
-      fontFamily: "Arial, sans-serif"
-    }}>
+    <div
+      style={{
+        padding: "30px",
+        maxWidth: "800px",
+        margin: "auto",
+        color: "white",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
       {/* 🔙 Back Button */}
       <button
         onClick={() => navigate("/")}
@@ -22,7 +24,7 @@ const PrivacyPolicy = () => {
           color: "#000",
           border: "none",
           borderRadius: "6px",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       >
         ← Back to Home
@@ -63,6 +65,9 @@ const PrivacyPolicy = () => {
       <p>
         This policy may change as our platform evolves. Please review it occasionally for updates.
       </p>
+
+      {/* ✅ Ezoic Disclosure Embed */}
+      <span id="ezoic-privacy-policy-embed"></span>
     </div>
   );
 };
