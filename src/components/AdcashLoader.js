@@ -5,20 +5,20 @@ const AdcashLoader = () => {
     const existingScript = document.getElementById("aclib-script");
     const bannerContainer = document.getElementById("adcash-banner");
 
-    // ✅ Remove any previously created banner
+    // 🚫 Remove existing banner children if re-entering the page
     if (bannerContainer && bannerContainer.hasChildNodes()) {
       bannerContainer.innerHTML = "";
     }
 
-    // ✅ If script already exists, just run the banner (don't reload script)
+    // ✅ If script already exists, just rerun banner
     if (existingScript) {
-      if (window.aclib && typeof window.aclib.runBanner === "function") {
+      if (window.aclib?.runBanner) {
         window.aclib.runBanner({ zoneId: "9864282" });
       }
       return;
     }
 
-    // ✅ Create and load Adcash library
+    // ✅ Insert the Adcash library
     const script = document.createElement("script");
     script.id = "aclib-script";
     script.type = "text/javascript";
@@ -27,7 +27,14 @@ const AdcashLoader = () => {
 
     script.onload = () => {
       if (window.aclib) {
+        // ✅ Force disable auto ad types
         window.aclib.autoTagEnabled = false;
+        window.aclib.runPush = () => {};
+        window.aclib.runInPagePush = () => {};
+        window.aclib.runInterstitial = () => {};
+        window.aclib.runAutoTag = () => {};
+
+        // ✅ Load only banner
         window.aclib.runBanner({ zoneId: "9864282" });
       }
     };
@@ -35,7 +42,20 @@ const AdcashLoader = () => {
     document.head.appendChild(script);
   }, []);
 
-  return <div id="adcash-banner" className="adcash-banner" style={{ position: "fixed", bottom: 0, width: "100%", zIndex: 9999 }}></div>;
+  return (
+    <div
+      id="adcash-banner"
+      className="adcash-banner"
+      style={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        width: "100%",
+        zIndex: 9999,
+        textAlign: "center",
+      }}
+    />
+  );
 };
 
 export default AdcashLoader;
