@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Home.css";
 import AdcashLoader from "./AdcashLoader";
+import { isBannerInitialized, markBannerInitialized } from "../utils/adControl";
 
 
 
@@ -109,9 +110,9 @@ const Home = () => {
         </button>
       </div>
     </motion.div>
-          </div>
-          <AdcashLoader />
-        </motion.div>
+      {/* ⬇️ Ad Loader */}
+      {showAd && <AdcashLoader />}
+    </motion.div>
     
   );
 
