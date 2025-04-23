@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import "./Home.css";
 import AdcashLoader from "./AdcashLoader";
 
+
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -106,11 +108,13 @@ const Home = () => {
           🙋‍♂️ My Profile
         </button>
       </div>
-
-      {/* 📢 Adcash Loader */}
-      <AdcashLoader />
     </motion.div>
+          </div>
+          <AdcashLoader />
+        </motion.div>
+    
   );
+
 };
 
 export default Home;

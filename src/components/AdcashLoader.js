@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const AdcashLoader = () => {
   useEffect(() => {
-    // Inject the Adcash library script only once
+    // Prevent duplicate injection
     if (!document.getElementById("aclib")) {
       const aclibScript = document.createElement("script");
       aclibScript.src = "//acscdn.com/script/aclib.js";
@@ -16,26 +16,40 @@ const AdcashLoader = () => {
     }
 
     function runAds() {
-      // Standard bottom banner
-      const bottomBannerScript = document.createElement("script");
-      bottomBannerScript.type = "text/javascript";
-      bottomBannerScript.innerHTML = `
-        aclib.runBanner({
-          zoneId: '9864210'
-        });
-      `;
-      document.getElementById("adcash-bottom-banner").appendChild(bottomBannerScript);
+      // Prevent duplicate banner
+      if (!document.getElementById("adcash-banner-script")) {
+        const bottomBannerScript = document.createElement("script");
+        bottomBannerScript.type = "text/javascript";
+        bottomBannerScript.id = "adcash-banner-script";
+        bottomBannerScript.innerHTML = `
+          aclib.runBanner({
+            zoneId: '9864210'
+          });
+        `;
+        const bannerContainer = document.getElementById("adcash-bottom-banner");
+        if (bannerContainer) {
+          bannerContainer.innerHTML = ""; // clear previous
+          bannerContainer.appendChild(bottomBannerScript);
+        }
+      }
 
-      // In-page push in bottom right
-      const inPagePushScript = document.createElement("script");
-      inPagePushScript.type = "text/javascript";
-      inPagePushScript.innerHTML = `
-        aclib.runInPagePush({
-          zoneId: '9864242',
-          maxAds: 2
-        });
-      `;
-      document.getElementById("adcash-inpage-push").appendChild(inPagePushScript);
+      // Prevent duplicate in-page push
+      if (!document.getElementById("adcash-push-script")) {
+        const inPagePushScript = document.createElement("script");
+        inPagePushScript.type = "text/javascript";
+        inPagePushScript.id = "adcash-push-script";
+        inPagePushScript.innerHTML = `
+          aclib.runInPagePush({
+            zoneId: '9864242',
+            maxAds: 2
+          });
+        `;
+        const pushContainer = document.getElementById("adcash-inpage-push");
+        if (pushContainer) {
+          pushContainer.innerHTML = ""; // clear previous
+          pushContainer.appendChild(inPagePushScript);
+        }
+      }
     }
   }, []);
 
