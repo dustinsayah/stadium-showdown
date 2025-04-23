@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "//pl26068884.profitablecpm.com/bab56a92e6ea3afec3f401755f2b68a9/invoke.js";
+    script.async = true;
+    document.getElementById("adsterra-banner")?.appendChild(script);
+  }, []);
 
   return (
     <motion.div
@@ -113,6 +120,9 @@ const Home = () => {
           🙋‍♂️ My Profile
         </button>
       </div>
+
+      {/* 📢 Adsterra Native Banner */}
+      <div id="adsterra-banner" style={{ marginTop: "40px" }}></div>
     </motion.div>
   );
 };
