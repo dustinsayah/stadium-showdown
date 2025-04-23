@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Home.css";
+import AdcashLoader from "./AdcashLoader";
+
 
 
 const Home = () => {
@@ -115,7 +117,12 @@ const Home = () => {
         </button>
       </div>
     </motion.div>
+          </div>
+          <AdcashLoader />
+        </motion.div>
+    
   );
+
 };
 
 export default Home;
