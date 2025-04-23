@@ -2,42 +2,40 @@ import { useEffect } from "react";
 
 const AdcashLoader = () => {
   useEffect(() => {
-    if (document.getElementById("aclib-script")) return; // ⛔ prevent duplicates
+    const existingScript = document.getElementById("aclib-script");
+    const bannerContainer = document.getElementById("adcash-banner");
 
+    // ✅ Remove any previously created banner
+    if (bannerContainer && bannerContainer.hasChildNodes()) {
+      bannerContainer.innerHTML = "";
+    }
+
+    // ✅ If script already exists, just run the banner (don't reload script)
+    if (existingScript) {
+      if (window.aclib && typeof window.aclib.runBanner === "function") {
+        window.aclib.runBanner({ zoneId: "9864282" });
+      }
+      return;
+    }
+
+    // ✅ Create and load Adcash library
     const script = document.createElement("script");
     script.id = "aclib-script";
     script.type = "text/javascript";
     script.src = "//acscdn.com/script/aclib.js";
     script.async = true;
-    document.head.appendChild(script);
 
     script.onload = () => {
-      // ✅ Clear previous banner
-      const existingBanner = document.getElementById("adcash-banner");
-      if (existingBanner) existingBanner.remove();
-
-      const wrapper = document.createElement("div");
-      wrapper.id = "adcash-banner";
-      wrapper.style.position = "fixed";
-      wrapper.style.bottom = "0";
-      wrapper.style.left = "0";
-      wrapper.style.width = "100%";
-      wrapper.style.zIndex = "9999";
-
-      const bannerScript = document.createElement("script");
-      bannerScript.type = "text/javascript";
-      bannerScript.innerHTML = `
-        aclib.runBanner({
-          zoneId: '9864282',
-        });
-      `;
-
-      wrapper.appendChild(bannerScript);
-      document.body.appendChild(wrapper);
+      if (window.aclib) {
+        window.aclib.autoTagEnabled = false;
+        window.aclib.runBanner({ zoneId: "9864282" });
+      }
     };
+
+    document.head.appendChild(script);
   }, []);
 
-  return null;
+  return <div id="adcash-banner" className="adcash-banner" style={{ position: "fixed", bottom: 0, width: "100%", zIndex: 9999 }}></div>;
 };
 
 export default AdcashLoader;
