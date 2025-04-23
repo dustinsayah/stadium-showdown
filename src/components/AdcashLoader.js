@@ -2,32 +2,42 @@ import { useEffect } from "react";
 
 const AdcashLoader = () => {
   useEffect(() => {
-    // Prevent re-initialization and duplication
-    if (window.aclibLoaded) return;
-    window.aclibLoaded = true;
+    if (document.getElementById("aclib-script")) return; // ⛔ prevent duplicates
 
     const script = document.createElement("script");
-    script.id = "aclib";
+    script.id = "aclib-script";
+    script.type = "text/javascript";
     script.src = "//acscdn.com/script/aclib.js";
     script.async = true;
+    document.head.appendChild(script);
 
     script.onload = () => {
-      // Disable auto-run ad types (in-page push, pops, etc.)
-      window.aclib.autoTagEnabled = false;
+      // ✅ Clear previous banner
+      const existingBanner = document.getElementById("adcash-banner");
+      if (existingBanner) existingBanner.remove();
 
-      // Render single banner ad
-      const container = document.getElementById("adcash-banner");
-      if (container && container.childNodes.length === 0) {
-        window.aclib.runBanner({
-          zoneId: "9864282"
+      const wrapper = document.createElement("div");
+      wrapper.id = "adcash-banner";
+      wrapper.style.position = "fixed";
+      wrapper.style.bottom = "0";
+      wrapper.style.left = "0";
+      wrapper.style.width = "100%";
+      wrapper.style.zIndex = "9999";
+
+      const bannerScript = document.createElement("script");
+      bannerScript.type = "text/javascript";
+      bannerScript.innerHTML = `
+        aclib.runBanner({
+          zoneId: '9864282',
         });
-      }
-    };
+      `;
 
-    document.body.appendChild(script);
+      wrapper.appendChild(bannerScript);
+      document.body.appendChild(wrapper);
+    };
   }, []);
 
-  return <div id="adcash-banner" className="adcash-banner"></div>;
+  return null;
 };
 
 export default AdcashLoader;
