@@ -23,20 +23,6 @@ const Home = () => {
         📘 How to Play
       </motion.button>
 
-      {/* 🔐 Privacy Policy - Top Right */}
-      <motion.button
-        className="top-right-button"
-        onClick={() => navigate("/privacy-policy")}
-        whileHover={{ scale: 1.05 }}
-      >
-        🔐 Privacy Policy
-      </motion.button>
-
-      {/* 🏆 Title */}
-      <h1 className="home-title">🏆 Stadium Showdown 🏆</h1>
-      <p className="home-subtitle">
-        Test your sports knowledge in different game modes!
-      </p>
 
       {/* 🎮 Game Mode Buttons */}
       <div className="button-grid">

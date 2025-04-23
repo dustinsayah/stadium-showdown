@@ -2,23 +2,22 @@ import { useEffect } from "react";
 
 const AdcashLoader = () => {
   useEffect(() => {
-    // Inject Adcash library script
+    // Load the Adcash script library
     const aclibScript = document.createElement("script");
     aclibScript.src = "//acscdn.com/script/aclib.js";
     aclibScript.async = true;
     aclibScript.id = "aclib";
     document.head.appendChild(aclibScript);
 
-    // Inject Adcash zone script after library loads
-    const runScript = document.createElement("script");
-    runScript.innerHTML = `
-      aclib.runBanner({
-        zoneId: '9864098'
-      });
-    `;
-    runScript.type = "text/javascript";
-
+    // Load the Adcash banner after the library is ready
     aclibScript.onload = () => {
+      const runScript = document.createElement("script");
+      runScript.type = "text/javascript";
+      runScript.innerHTML = `
+        aclib.runBanner({
+          zoneId: '9864210'
+        });
+      `;
       document.getElementById("adcash-bottom-banner").appendChild(runScript);
     };
   }, []);
