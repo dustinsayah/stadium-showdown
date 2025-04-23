@@ -206,5 +206,9 @@ body {
     justify-content: center;
     z-index: 9999;
   }
-  
+  /* Prevent duplicate Adcash banners */
+.adcash-banner > div:not(:first-child) {
+  display: none !important;
+}
+
   
