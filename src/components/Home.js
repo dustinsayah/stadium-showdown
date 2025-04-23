@@ -24,6 +24,12 @@ const Home = () => {
       </motion.button>
 
 
+      {/* 🏆 Title */}
+      <h1 className="home-title">🏆 Stadium Showdown 🏆</h1>
+      <p className="home-subtitle">
+        Test your sports knowledge in different game modes!
+      </p>
+
       {/* 🎮 Game Mode Buttons */}
       <div className="button-grid">
         <motion.button
