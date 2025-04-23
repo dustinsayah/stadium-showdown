@@ -201,8 +201,10 @@ body {
   .adcash-banner {
     position: fixed;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
     z-index: 9999;
   }
+  
   
