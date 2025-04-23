@@ -2,60 +2,50 @@ import { useEffect } from "react";
 
 const AdcashLoader = () => {
   useEffect(() => {
+    // Check if banner already exists in the DOM
+    const existingContainer = document.getElementById("adcash-banner");
     const existingScript = document.getElementById("aclib-script");
-    const bannerContainer = document.getElementById("adcash-banner");
 
-    // 🚫 Remove existing banner children if re-entering the page
-    if (bannerContainer && bannerContainer.hasChildNodes()) {
-      bannerContainer.innerHTML = "";
+    if (!existingContainer) {
+      const banner = document.createElement("div");
+      banner.id = "adcash-banner";
+      banner.style.position = "fixed";
+      banner.style.bottom = "0";
+      banner.style.width = "100%";
+      banner.style.zIndex = "9999";
+      banner.style.textAlign = "center";
+      document.body.appendChild(banner);
+    } else {
+      // Prevent reinserting if already initialized
+      if (existingContainer.hasChildNodes()) return;
     }
 
-    // ✅ If script already exists, just rerun banner
-    if (existingScript) {
-      if (window.aclib?.runBanner) {
-        window.aclib.runBanner({ zoneId: "9864282" });
+    if (!existingScript) {
+      const script = document.createElement("script");
+      script.id = "aclib-script";
+      script.src = "//acscdn.com/script/aclib.js";
+      script.async = true;
+
+      script.onload = () => {
+        if (window.aclib) {
+          window.aclib.autoTagEnabled = false;
+          window.aclib.runBanner({ zoneId: "9864282" });
+        }
+      };
+
+      document.head.appendChild(script);
+    } else {
+      // Script already loaded: run only if banner not rendered yet
+      if (window.aclib && typeof window.aclib.runBanner === "function") {
+        const bannerDiv = document.getElementById("adcash-banner");
+        if (bannerDiv && bannerDiv.childNodes.length === 0) {
+          window.aclib.runBanner({ zoneId: "9864282" });
+        }
       }
-      return;
     }
-
-    // ✅ Insert the Adcash library
-    const script = document.createElement("script");
-    script.id = "aclib-script";
-    script.type = "text/javascript";
-    script.src = "//acscdn.com/script/aclib.js";
-    script.async = true;
-
-    script.onload = () => {
-      if (window.aclib) {
-        // ✅ Force disable auto ad types
-        window.aclib.autoTagEnabled = false;
-        window.aclib.runPush = () => {};
-        window.aclib.runInPagePush = () => {};
-        window.aclib.runInterstitial = () => {};
-        window.aclib.runAutoTag = () => {};
-
-        // ✅ Load only banner
-        window.aclib.runBanner({ zoneId: "9864282" });
-      }
-    };
-
-    document.head.appendChild(script);
   }, []);
 
-  return (
-    <div
-      id="adcash-banner"
-      className="adcash-banner"
-      style={{
-        position: "fixed",
-        bottom: 0,
-        left: 0,
-        width: "100%",
-        zIndex: 9999,
-        textAlign: "center",
-      }}
-    />
-  );
+  return null; // We attach to body directly
 };
 
 export default AdcashLoader;
