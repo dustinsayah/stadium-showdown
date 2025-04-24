@@ -25,6 +25,7 @@ const AdcashLoader = () => {
         bottom: 0,
         left: 0,
         width: "100%",
+        height: "90px",
         zIndex: 9999,
         textAlign: "center",
       }}
